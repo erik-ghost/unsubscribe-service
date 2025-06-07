@@ -1,5 +1,12 @@
-const app = document.getElementById('app');
+import express from 'express';
 
-if (app) {
-  app.textContent = 'hello world';
-}
+const app = express();
+
+app.get('/unsubscribe', (req, res) => {
+  console.log('hello world');
+  res.sendStatus(200);
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
