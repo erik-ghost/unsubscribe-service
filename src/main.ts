@@ -24,6 +24,24 @@ app.get('/unsubscribe', (req, res) => {
   res.redirect(302, redirectUrl.toString());
 });
 
-app.listen(3000, '0.0.0.0', () => {
+const server = app.listen(3000, '0.0.0.0', () => {
   console.log('Express server listening on http://0.0.0.0:3000');
 });
+
+// Graceful shutdown on SIGINT or SIGTERM
+function shutdown() {
+  console.log('Received shutdown signal, closing server...');
+  server.close(() => {
+    console.log('Server closed');
+    process.exit(0);
+  });
+
+  // Force exit after 5 seconds if not closed
+  setTimeout(() => {
+    console.error('Forcefully shutting down');
+    process.exit(1);
+  }, 5000);
+}
+
+process.on('SIGINT', shutdown);
+process.on('SIGTERM', shutdown);

@@ -19,5 +19,8 @@ ENV PATH=/app/node_modules/.bin:$PATH
 # Expose port 3000 for the application server
 EXPOSE 3000
 
+# Use SIGTERM as stop signal for graceful shutdown
+STOPSIGNAL SIGTERM
+
 # Start the Express server directly with node (CommonJS)
 CMD ["node", "src/main.ts"]
