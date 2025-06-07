@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   unsubscribe-service:
@@ -7,5 +7,3 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5173:5173"
-    stdin_open: true   # equivalent to -i
-    tty: true          # equivalent to -t
