@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  unsubscribe-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    stdin_open: true   # equivalent to -i
+    tty: true          # equivalent to -t
