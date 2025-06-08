@@ -37,8 +37,8 @@ function check_bad_request() {
   fi
 }
 
-UUID="74f2fc9a-af00-4d90-af0f-3fa093a288e8"
-KEY="472602d540c9c744cfda088540f47ded7bb14d49559f06b57b6c0748435a4658"
+UUID="fbb93683-b076-4eee-a7e3-d6b912b6dcd8"
+KEY="43eef6c0e3957159b8e972ca8ab163d90831b7f1e7754b0d42e418c8a08883b1"
 NEWSLETTER="ba5bbf3a-b3b3-4939-9d25-4e71d365c2d6"
 
 echo "Running unsubscribe integration tests..."
