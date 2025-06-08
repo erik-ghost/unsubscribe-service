@@ -6,7 +6,7 @@
 UUID="fbb93683-b076-4eee-a7e3-d6b912b6dcd8"
 KEY="43eef6c0e3957159b8e972ca8ab163d90831b7f1e7754b0d42e418c8a08883b1"
 NEWSLETTER="ba5bbf3a-b3b3-4939-9d25-4e71d365c2d6"
-URL="http://localhost:3000/unsubscribe?uuid=$UUID&key=$KEY&newsletter=$NEWSLETTER"
+URL="http://localhost:3000/unsubscribe/?uuid=$UUID&key=$KEY&newsletter=$NEWSLETTER"
 
 echo "Testing GET $URL"
 
